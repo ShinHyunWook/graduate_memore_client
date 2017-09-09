@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/friend_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.mglab.memore.CircleImageView
+            android:id="@+id/item_friend_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:id="@+id/item_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/item_friend_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_friend"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/x" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/friend_list_item"
+        android:layout_alignEnd="@+id/friend_list_item"
+        android:layout_alignLeft="@+id/friend_list_item"
+        android:layout_alignRight="@+id/friend_list_item"
+        android:layout_alignStart="@+id/friend_list_item"
+        android:layout_alignTop="@+id/friend_list_item"
+        android:background="#44000000"
+        android:gravity="center"
+        android:text="삭제된 친구 입니다."
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/yes_no_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:visibility="gone">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_yes"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="#5CD1E5"-->
+    <!--android:text="수락"-->
+    <!--android:textColor="#ffffff" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_no"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#444444"-->
+    <!--android:text="거절"-->
+    <!--android:textColor="#ffffff" />-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/accept_message"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="이제 친구입니다."-->
+    <!--android:visibility="gone" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/reject_message"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="요청이 삭제 되었습니다."-->
+    <!--android:visibility="gone" />-->
+
+</RelativeLayout>

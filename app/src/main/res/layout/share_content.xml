@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8">
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/share_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/action_bar"
+        android:id="@+id/thumb_friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="none"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"/>
+
+</RelativeLayout>

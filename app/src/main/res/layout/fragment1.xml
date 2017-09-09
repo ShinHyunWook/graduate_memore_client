@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/view_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imagetrans"
+                        android:layout_alignTop="@+id/map"
+                        android:layout_alignBottom="@+id/map"
+                        android:layout_alignEnd="@+id/map"
+                        android:layout_alignRight="@+id/map"
+                        android:layout_alignLeft="@+id/map"
+                        android:layout_alignStart="@+id/map"
+                        android:src="#00000000"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#FFB8B8B8"
+                        android:layout_below="@id/map"/>
+
+                    <ImageButton
+                        android:background="@drawable/circle_border"
+                        android:elevation="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/calendar"
+                        android:scaleType="fitCenter"
+                        android:padding="20dp"
+                        android:id="@+id/btn_setDate"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/topbottombar"
+                    android:paddingTop="7dp">
+
+                    <LinearLayout
+                        android:id="@+id/myMemoreBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/myMemoreText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp"
+                            android:paddingLeft="12dp"
+                            android:text="나의 기억들" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/view_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:text="전체 보기 >"
+                            android:textColor="#919191"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/galleryRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/myMemoreBtn"
+                        android:layout_gravity="center"
+                        android:paddingLeft="17dp" />
+
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/select_date"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="0.5">-->
+
+                <!--<Button-->
+                <!--android:id="@+id/btnStartDate"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="시작 날짜" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/btnEndDate"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/btnStartDate"-->
+                <!--android:text="종료 날짜" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/btnRoute"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/btnEndDate"-->
+                <!--android:text="경로확인" />-->
+
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/topbottombar"
+                    android:paddingTop="20dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/distanceText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp"
+                            android:paddingLeft="10dp"
+                            android:text="이동거리" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/distance_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/distanceText"
+                        android:orientation="horizontal">
+                        <!--android:layoutAnimation="@anim/layout_controller"-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            android:background="@drawable/gradation_background"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="20dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/txtDistance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:textColor="#ffffff"
+                                    android:textSize="35sp" />
+
+                                <TextView
+                                    android:id="@+id/txtDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_below="@+id/txtDistance"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:paddingBottom="5dp"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/topbottombar"
+                    android:paddingTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/myMemoreFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/myMemoreFriendText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp"
+                            android:paddingLeft="12dp"
+                            android:text="함께한 친구들" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/friendRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/myMemoreFriend"
+                        android:layout_gravity="center"
+                        android:paddingLeft="17dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/drawerView"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>

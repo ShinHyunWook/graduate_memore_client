@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_folder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:text="Gallery"
+            android:textColor="#4f4f4f" />
+
+        <LinearLayout
+            android:id="@+id/gallery_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#9164a8"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_cut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:text="Cut"
+            android:textColor="#4f4f4f" />
+
+        <LinearLayout
+            android:id="@+id/cut_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#9164a8"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

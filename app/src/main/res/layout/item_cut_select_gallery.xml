@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/cut_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/galleryId"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/cut_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFB8B8B8"
+        android:layout_alignParentBottom="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/itemSelected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"></RelativeLayout>
+</RelativeLayout>

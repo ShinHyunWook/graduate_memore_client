@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/friend_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/friend_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <RelativeLayout
+        android:id="@+id/searchForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFB8B8B8" />
+
+        <RelativeLayout
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundbox_friend_search"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/insert_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:hint="이름으로 친구 검색"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/search_friend"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/insert_name"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/tap4"
+                android:text="검색" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/search_edit"
+            android:background="#FFB8B8B8" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_result_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/friend_request_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/friend_request_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:id="@+id/txt_friend_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="요청 친구" />
+
+                    <TextView
+                        android:id="@+id/request_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/request_arrow"
+                        android:background="@drawable/friend_button_fill"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="0개"
+                        android:textColor="#ffffff" />
+
+                    <ImageView
+                        android:id="@+id/request_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/barrow_down" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/friend_request_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/friend_request_top"
+                    android:layout_marginBottom="15dp"
+                    android:choiceMode="singleChoice"
+                    android:divider="#00ffcc22"
+                    android:dividerHeight="25dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/friend_request_list"
+                    android:background="#FFB8B8B8" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/friend_list_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_friend_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:text="친구" />
+
+                <ListView
+                    android:id="@+id/friend_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txt_friend_list"
+                    android:layout_marginBottom="15dp"
+                    android:choiceMode="singleChoice"
+                    android:divider="#00ffcc22"
+                    android:dividerHeight="25dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/search_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/search_top_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="검색 결과"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/btn_close_result"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="#00000000"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/close_button"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/search_top_bar"
+                    android:background="#FFB8B8B8" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="15dp">
+
+                <ListView
+                    android:id="@+id/search_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:choiceMode="singleChoice"
+                    android:divider="#00ffcc22"
+                    android:dividerHeight="25dp" />
+
+                <TextView
+                    android:id="@+id/none_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="존재하지 않는 이름입니다."
+                    android:textAlignment="center"
+                    android:layout_alignTop="@+id/search_list"
+                    android:layout_alignBottom="@+id/search_list"
+                    android:layout_alignEnd="@+id/search_list"
+                    android:layout_alignRight="@+id/search_list"
+                    android:layout_alignLeft="@+id/search_list"
+                    android:layout_alignStart="@+id/search_list"
+                    android:background="#ffffff"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

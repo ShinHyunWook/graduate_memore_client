@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.mglab.memore.MainActivity"
+        android:background="#ededed">
+
+        <include
+            layout="@layout/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/menu_box"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#2f2f2f"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:src="@drawable/tap1"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ededed"
+                android:textColor="#2f2f2f" />
+
+            <ImageButton
+                android:src="@drawable/tap2"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ededed"
+                android:textColor="#2f2f2f" />
+
+            <ImageButton
+                android:src="@drawable/tap3"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ededed"
+                android:textColor="#2f2f2f" />
+
+
+            <!--<ImageButton-->
+                <!--android:src="@drawable/tap4"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--android:padding="12dp"-->
+                <!--android:id="@+id/btn4"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#ededed"-->
+                <!--android:textColor="#2f2f2f" />-->
+
+
+            <ImageButton
+                android:src="@drawable/tap5"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ededed"
+                android:textColor="#2f2f2f" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/drawerView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@layout/drawer"
+        app:theme="@style/NavigationViewStyle"
+        android:background="#ededed">
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ededed"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/profile_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <!--<com.mglab.memore.CircleImageView-->
+                <!--android:id="@+id/user_image"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:background="@drawable/main_logo"-->
+                <!--android:maxHeight="200dp"-->
+                <!--android:maxWidth="200dp"-->
+                <!--android:onClick="onClick" />-->
+
+            <com.mglab.memore.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/u_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/u_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u_name"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/roundbox"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="#626262"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/profile_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="프로필 정보"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_info_txt"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/topbottombar">
+
+                <LinearLayout
+                    android:id="@+id/Lin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/friend" />
+
+                    <EditText
+                        android:id="@+id/inputName"
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
+                        android:layout_height="45dp"
+                        android:hint="User Name"
+                        android:background="@null"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/partition2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Lin_name">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="10"
+                        android:background="#FFB8B8B8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Lin_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Lin_name">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/tap_on3" />
+
+                    <Button
+                        android:id="@+id/btn_UploadPicture"
+                        android:layout_height="45dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
+                        android:text="프로필 사진 변경"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:background="@null"
+                        android:textAlignment="viewStart"
+                        android:layout_gravity="start"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/partition3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Lin_picture">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="10"
+                        android:background="#FFB8B8B8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Lin_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Lin_picture">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/friend" />
+
+                    <EditText
+                        android:id="@+id/inputPhone"
+                        android:layout_height="45dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
+                        android:layout_centerHorizontal="true"
+                        android:hint="Phone Number"
+                        android:background="@null"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/password_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="비밀번호 변경"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_txt"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/topbottombar">
+
+                <LinearLayout
+                    android:id="@+id/password_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/password" />
+
+                    <EditText
+                        android:id="@+id/inputPassword_1"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="10"
+                        android:background="@null"
+                        android:hint="비밀번호"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/partition1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password_1">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="10"
+                        android:background="#FFB8B8B8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/partition1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/password" />
+
+                    <EditText
+                        android:id="@+id/inputPassword_2"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="10"
+                        android:background="@null"
+                        android:hint="비밀번호 확인"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--<Button-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:onClick="uploadImage"-->
+        <!--android:text="확인" />-->
+    </LinearLayout>
+</LinearLayout>

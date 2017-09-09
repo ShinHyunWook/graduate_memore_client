@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="친구 태그하기"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        android:gravity="center_vertical"/>
+
+    <ImageButton
+        android:src="@drawable/x"
+        android:scaleType="fitCenter"
+        android:padding="12dp"
+        android:textColor="#ffffff"
+        android:background="#00000000"
+        android:id="@+id/btn_quit"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_below="@+id/btn_quit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFB8B8B8"
+        android:layout_marginBottom="15dp"/>
+</RelativeLayout>

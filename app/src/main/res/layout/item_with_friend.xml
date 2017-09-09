@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="125dp"
+    android:layout_height="125dp"
+    android:background="#ffffff"
+    android:layout_marginRight="8dp">
+
+    <com.mglab.memore.CircleImageView
+        android:id="@+id/tag_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000" />
+    <TextView
+        android:id="@+id/tag_name"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag_profile"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

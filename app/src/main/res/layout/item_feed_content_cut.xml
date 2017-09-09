@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/cut_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="this is a caption about cut List"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_tag_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/tag_icon"
+            android:scaleType="centerCrop"
+            android:background="#00000000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFB8B8B8"
+            android:layout_alignParentBottom="true">
+        </View>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/feedCutRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"/>
+</LinearLayout>

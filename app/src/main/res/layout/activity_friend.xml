@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/friend_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <LinearLayout
+        android:id="@+id/friend_btn_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_action">
+
+        <Button
+            android:id="@+id/f_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구 검색" />
+
+        <Button
+            android:id="@+id/f_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/f_search"
+            android:text="친구 리스트" />
+
+        <Button
+            android:id="@+id/f_request_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/f_search"
+            android:text="친구 요청 리스트" />
+    </LinearLayout>
+</RelativeLayout>

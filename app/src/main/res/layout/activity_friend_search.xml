@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<TextView
+    android:id="@+id/friend_email"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"/>
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/friend_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/friend_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <RelativeLayout
+        android:id="@+id/searchForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFB8B8B8" />
+
+        <RelativeLayout
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundbox_friend_search">
+
+            <EditText
+                android:id="@+id/insert_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:hint="아이디로 친구 찾기"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/search_friend"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/insert_email"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/tap4" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/search_edit"
+            android:background="#FFB8B8B8" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_result_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/search_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ededed">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/back_avatar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="기억을 공유할 친구들을 찾아보세요."
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:id="@+id/search_result_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <com.mglab.memore.CircleImageView
+                        android:id="@+id/friend_profile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/main_logo"  />
+
+                    <TextView
+                        android:id="@+id/friend_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:text="ShinHyunWook" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_result_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_result_info"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/friend_request"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9164a8"
+                        android:background="@drawable/friend_button_no_fill"
+                        android:text="+ 요청"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/friend_cancel"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/friend_button_fill"
+                        android:text="요청 취소"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/friend_delete"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/friend_button_fill"
+                        android:text="친구 삭제"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/yes_no_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/friend_button_fill"
+                            android:text="수락" />
+
+                        <Button
+                            android:id="@+id/btn_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9164a8"
+                            android:background="@drawable/friend_button_no_fill"
+                            android:text="거절"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

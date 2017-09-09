@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_action"
+        layout="@layout/cut_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/cutEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:hint="컷에 대한 기억을 이야기해주세요."
+                android:textColor="#000000"
+                android:textColorHint="#919191" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.wefika.flowlayout.FlowLayout
+                android:id="@+id/flow_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:gravity="start|top">
+
+
+            </com.wefika.flowlayout.FlowLayout>
+
+            <ImageButton
+                android:id="@+id/addFriend"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_friend" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="#FFB8B8B8" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/top_action"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1.5"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp" />
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_centerVertical="true"
+    android:background="#ededed">
+
+    <ImageButton
+        android:id="@+id/nav_logout"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/logout" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <com.mglab.memore.CircleImageView
+            android:id="@+id/logoImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/main_logo"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_toRightOf="@+id/user_name"
+            android:layout_below="@+id/logoImage"
+            android:layout_marginTop="15.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00000000"
+            android:src="@drawable/edit"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:textSize="17sp"
+            android:background="@drawable/roundbox_5dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
